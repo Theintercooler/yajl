@@ -17,6 +17,8 @@ include_directories(
 
 set(YAJL_LIBRARY yajl CACHE INTERNAL "Yajl json parser library")
 
+tig_add_definitions_for(${YAJL_LIBRARY})
+
 add_library(${YAJL_LIBRARY} STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src/yajl.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/yajl_alloc.c
